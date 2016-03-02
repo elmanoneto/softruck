@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Softruck</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel='stylesheet' href='src/assets/css/main.css'>
+    <link rel="stylesheet" href="node_modules/bootstrap-css-only/css/bootstrap.css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css">
+  </head>
+  <body ng-app="Softruck">
+    <div ng-view></div>
+  </body>
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-route/angular-route.js"></script>
+  <script src="http://maps.google.com/maps/api/js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
+  <script src="node_modules/angular-leaflet-directive/dist/angular-leaflet-directive.js"></script>
+  <script src="src/main.js"></script>
+  <script src="src/services/geolocation_service.js"></script>
+  <script src="src/controller/map_controller.js"></script>
+  <script src="src/constants.js"></script>
+</html>

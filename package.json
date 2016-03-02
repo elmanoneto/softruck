@@ -1,0 +1,23 @@
+{
+  "name": "softruck",
+  "version": "0.0.1",
+  "description": "Softruck Challenge",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elmano Neto <elmanoneto@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  },
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-leaflet-directive": "^0.10.0",
+    "angular-route": "^1.5.0",
+    "bootstrap-css-only": "^3.3.6",
+    "normalize.css": "^3.0.3"
+  }
+}

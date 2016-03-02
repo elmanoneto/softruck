@@ -1,0 +1,116 @@
+$zindex: 1000000000000;
+
+nav#push-menu {
+  background-color: black;
+  color: white;
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  z-index: 1000000000000;
+  right: 0;
+  margin-right: -320px;
+  transition: 0.2s linear;
+  padding: 0 10px;
+  top: 0;
+  opacity: 0.7;
+}
+
+.isOpenMenu {
+  margin-right: 0px !important;
+  right: 0px !important;
+
+  form {
+    position: relative;
+    right: 0px;
+  }
+}
+
+div#icon-menu {
+  p {
+    color: red;
+    font-size: 30pt;
+    font-weight: bold;
+    position: absolute;
+    z-index: $zindex;
+    right: 0;
+    margin-right: 50px;
+    margin-top: 20px;
+    text-shadow: 0px 0px 12px rgba(150, 150, 150, 1);
+    cursor: pointer;
+    transition: 0.2s linear;
+  }
+
+  .isOpen {
+    margin-right: 320px;
+  }
+}
+
+div#content-menu {
+  position: absolute;
+  z-index: $zindex;
+  right: -300px;
+  transition: 0.2s linear;
+  text-align: left;
+
+  h2 {
+    color: white;
+    margin-right: 42px;
+  }
+
+  h4 {
+    color: white;
+    font-weight: bold;
+  }
+
+  .form-control {
+    width: 97% !important;
+  }
+
+  button {
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  div#content-menu {
+    position: absolute;
+    z-index: $zindex;
+    right: -310px;
+    transition: 0.2s linear;
+    text-align: left;
+  }
+
+  nav#push-menu {
+    background-color: black;
+    color: white;
+    width: 260px;
+    height: 100%;
+    position: absolute;
+    z-index: $zindex;
+    right: 0;
+    margin-right: -280px;
+    transition: 0.2s linear;
+    padding: 0 10px;
+    top: 0;
+    opacity: 0.7;
+  }
+
+  div#icon-menu {
+    p {
+    }
+    .isOpen {
+      margin-right: 280px;
+    }
+  }
+
+  div#content-menu h2 {
+    margin-right: 70px;
+    font-size: 16pt;
+  }
+
+  div#icon-menu {
+    p {
+      margin-right: 20px;
+    }
+  }
+}
