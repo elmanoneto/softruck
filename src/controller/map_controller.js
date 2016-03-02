@@ -21,7 +21,6 @@ app.controller('MapController', function ($scope, GeolocationService) {
       $scope.venues = data.data.response.venues;
       var venues = data.data.response.groups[0].items;
       for (var i in venues) {
-        console.log();
         $scope.markersTop.push(
           {
             lat: venues[i].venue.location.lat,
