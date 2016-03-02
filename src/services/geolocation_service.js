@@ -21,7 +21,7 @@ app.factory('GeolocationService', function ($q,$window, $http, API) {
   function getTopFivePlaces(lat, long) {
     deferred = $q.defer();
 
-    $http.get(API.URL+'?client_id='+API.CLIENT_ID+'&client_secret='+API.CLIENT_SECRET+'&ll='+lat+','+long+'&limit=5&v=20140806&m=foursquare')
+    $http.get(API.URL_TOP+'?client_id='+API.CLIENT_ID+'&client_secret='+API.CLIENT_SECRET+'&ll='+lat+','+long+'&limit=5&v=20140806&m=foursquare')
       .then(function (data) {
         deferred.resolve(data);
       })

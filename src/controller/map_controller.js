@@ -8,6 +8,7 @@ app.controller('MapController', function ($scope, GeolocationService) {
     $scope.coord.lat = data.coords.latitude;
     $scope.coord.lng = data.coords.longitude;
     $scope.coord.zoom = 15;
+    console.log(data);
   });
 
   $scope.category = 'selecione';
@@ -17,17 +18,16 @@ app.controller('MapController', function ($scope, GeolocationService) {
     $scope.markersTop = [];
     $scope.venues = [];
     GeolocationService.getTopFivePlaces($scope.coord.lat, $scope.coord.lng).then(function (data) {
-      console.log(data);
       $scope.venues = data.data.response.venues;
-      var venues = data.data.response.venues;
-      console.log(venues);
+      var venues = data.data.response.groups[0].items;
       for (var i in venues) {
+        console.log();
         $scope.markersTop.push(
           {
-            lat: venues[i].location.lat,
-            lng: venues[i].location.lng,
+            lat: venues[i].venue.location.lat,
+            lng: venues[i].venue.location.lng,
             focus: true,
-            message: venues[i].name +' - Checkins: '+venues[i].stats.checkinsCount,
+            message: venues[i].venue.name +' - Checkins: '+venues[i].venue.stats.checkinsCount
           }
         )
       }
