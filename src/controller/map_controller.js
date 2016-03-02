@@ -12,7 +12,6 @@ app.controller('MapController', function ($scope, GeolocationService) {
 
   $scope.category = 'selecione';
 
-
   $scope.getTopFivePlaces = function () {
     $scope.paths = {};
     $scope.markersTop = [];
@@ -30,7 +29,7 @@ app.controller('MapController', function ($scope, GeolocationService) {
             focus: true,
             message: venues[i].name +' - Checkins: '+venues[i].stats.checkinsCount,
           }
-        );
+        )
       }
     })
   }
@@ -48,7 +47,7 @@ app.controller('MapController', function ($scope, GeolocationService) {
             focus: true,
             message: venues[i].name,
           }
-        );
+        )
       }
     })
   }
@@ -65,15 +64,15 @@ app.controller('MapController', function ($scope, GeolocationService) {
       }
 
       var pathsDict = {
-          circleMarker: {
-              type: "circle",
-              color: '',
-              radius: 2000,
-              latlngs: location.local
-          }
+        circleMarker: {
+          type: "circle",
+          color: '',
+          radius: 2000,
+          latlngs: location.local
+        }
       }
 
-      if (data.data.response.venues.length < 30 ) {
+      if (data.data.response.venues.length < 40 ) {
         pathsDict.circleMarker.color = 'green';
       } else {
         pathsDict.circleMarker.color = 'red';
